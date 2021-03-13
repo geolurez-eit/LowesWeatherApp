@@ -1,0 +1,14 @@
+<resources>
+    <string name = "app_name">LowesWeatherApp</string>
+    <string name="degrees">°</string>
+    <string name="feels_like">Feels Like: </string>
+    <string name="temp">Temp: </string>
+    <string name="clouds">Clouds</string>
+    <string name="saturday">Saturday</string>
+    <string name="feelsliketest">Feels like: 78</string>
+    <string name="city_name">City Name</string>
+    <string name="lookup">Lookup</string>
+    <string name="weather_icon">Weather Icon</string>
+    <string name="degree_test">72</string>
+    <string name="description_test">Broken clouds</string>
+</resources>

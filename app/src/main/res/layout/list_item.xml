@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/listitem_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:elevation="2dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_date_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/saturday"
+            android:layout_marginHorizontal="@dimen/margin_standard"
+            android:layout_marginTop="@dimen/margin_standard"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <ImageView
+            android:id="@+id/listitem_icon_imageview"
+            android:layout_width="@dimen/image_standard"
+            android:layout_height="@dimen/image_standard"
+            android:layout_margin="@dimen/margin_standard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listitem_date_textview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src="@drawable/ic_cloud"
+            android:contentDescription="@string/weather_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_description_textview"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="@dimen/wrap_constraint"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_standard"
+            tools:text="@string/clouds"
+            app:layout_constraintBottom_toBottomOf="@id/listitem_icon_imageview"
+            app:layout_constraintStart_toEndOf="@id/listitem_icon_imageview"
+            app:layout_constraintTop_toTopOf="@id/listitem_icon_imageview"
+            app:layout_constraintEnd_toStartOf="@id/listitem_temp"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_temp"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="@dimen/wrap_constraint"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_standard"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="@id/listitem_icon_imageview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/listitem_icon_imageview"
+            app:layout_constraintStart_toEndOf="@id/listitem_description_textview"
+            tools:text="Temp: 72" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

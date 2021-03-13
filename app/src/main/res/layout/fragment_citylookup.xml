@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    xmlns:app = "http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/citylookup_inputlayout"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="@dimen/margin_double"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/citylookup_edittext"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:inputType="text"
+            android:hint="@string/city_name"
+            android:textAlignment="center"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/citylookup_lookupbutton"
+        android:layout_width = "@dimen/wrap_constraint"
+        android:layout_height = "wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_double"
+        android:layout_marginVertical="@dimen/margin_standard"
+        app:layout_constraintStart_toStartOf ="@id/citylookup_inputlayout"
+        app:layout_constraintEnd_toEndOf="@id/citylookup_inputlayout"
+        app:layout_constraintTop_toBottomOf="@id/citylookup_inputlayout"
+        android:text="@string/lookup"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
