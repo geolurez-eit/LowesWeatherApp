@@ -18,6 +18,7 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatterBuilder
 import java.time.format.TextStyle
 import java.time.temporal.ChronoField
+import java.util.*
 
 class ForecastAdapter(private val forecastDelegate: ForecastDelegate) :
     RecyclerView.Adapter<ForecastAdapter.ForecastViewHolder>() {
@@ -44,7 +45,7 @@ class ForecastAdapter(private val forecastDelegate: ForecastDelegate) :
         val dayForecast = WeatherViewModel.forecast.value?.list?.get(position)
         holder.apply {
             forecastDate.text = getDate(dayForecast)
-            description.text = dayForecast?.weather?.first()?.description ?: "No Data"
+            description.text = dayForecast?.weather?.first()?.description?.capitalize(Locale.ROOT)
             temp.text = StringBuffer().append(this.itemView.context.getString(R.string.temp))
                 .append(dayForecast?.main?.temp.toString())
                 .append(this.itemView.context.getString(R.string.degrees))
